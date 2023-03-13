@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Week 1 Form Assignment</title>
+        <style>
+            fieldset{
+  border: 5px solid black;
+  width: 400px;
+  margin:auto;
+}
+
+.thefirstline{
+    width: 250px;
+  margin:auto;
+}
+        </style>
+    </head>
+    <body>
+
+        <!-- Create a simple form with the following features 
+        1. Takes in Name, Email address, Phone number, Gender and Password 
+        2. A SUBMIT button. 
+        3. On submit must highlight the empty block. 
+        4. Error message when entering the wrong format of email ID. 
+        5. Display a success message on successful submission -->
+
+       <h1 class="thefirstline"> Fill in your details</h1>
+       <br>
+        <form method="*" onsubmit="myFunction()">
+            <fieldset style="">
+                <!-- <legend> Personal Details</legend> -->
+              
+                <br>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="theName" required style="float:right; width:250px">
+                <br>
+                <br>
+                <label for="mail">Email Adress:</label>
+                <input type="email" name="mail" id="mail" required style="float:right; width:250px">
+                <br>
+                <br>
+                <label for="phone">Phone Number: </label>
+                <input type="tel" name="phone" id="phone" required style="float:right; width:250px">
+                <br>
+                <br>
+                <label>Gender: </label>
+                <div style="float:right; width:250px">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male" required>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female" required>
+       
+            </div>
+                <br>
+                <br>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" required style="float:right; width:250px"> 
+                <br>
+                <br>
+
+                <input type="submit" value="Submit" style="width: 400px; color:white; background-color: green; border-radius: 10px; height: 30px;">
+                <br>
+              
+
+            </fieldset>
+        </form>
+        <script>
+            function myFunction()
+            {
+                alert("Successfully submitted!");
+            }
+        </script>
+    </body>
+</html>
